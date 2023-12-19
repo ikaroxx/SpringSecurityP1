@@ -1,6 +1,10 @@
 # 서버 포트 설정
 server:
   port: 8080
+  servlet:
+    session:
+      timeout: 1800
+
 
 # database 연동 설정
 spring:
@@ -13,6 +17,11 @@ spring:
     password: 1234
     thymeleaf:
       cache: false
+      # 머스태치 설정csrf오류
+  mustache:
+    servlet:
+      expose-request-attribute: true
+
 
   # spring data jpa 설정
   jpa:
